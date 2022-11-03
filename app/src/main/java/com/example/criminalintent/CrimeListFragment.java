@@ -1,5 +1,6 @@
 package com.example.criminalintent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +37,12 @@ public class CrimeListFragment extends Fragment {
         mCrimeRecyclerView.setAdapter(mAdapter);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
+    }
+
     private class CrimeHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView mTitleTextView;
         private TextView mDateTextView;
@@ -51,7 +58,8 @@ public class CrimeListFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(getActivity(),mCrime.getTile()+"clicked",Toast.LENGTH_SHORT).show();
+            Intent intent=CrimeActivity.newIntent(getActivity(),mCrime.getMid());
+            startActivity(intent);
         }
 
         public void bind(Crime crime){
