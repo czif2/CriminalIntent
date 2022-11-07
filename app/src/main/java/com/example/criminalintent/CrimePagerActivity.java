@@ -35,7 +35,7 @@ public class CrimePagerActivity extends AppCompatActivity {
 
         UUID crimeId=(UUID) getIntent().getSerializableExtra(EXTRA_CRIME_ID);
 
-        mViewPager = (ViewPager) findViewById(R.id.crime_view_pager);
+        mViewPager = (ViewPager) findViewById(R.id.crime_view_pager);//找到对应视图
         mCrimes = CrimeLab.get(this).getCrimes();//从list中获取数据集
         FragmentManager fragmentManager=getSupportFragmentManager();//获取fragment manager实例
         mViewPager.setAdapter(new FragmentStatePagerAdapter(fragmentManager) {
