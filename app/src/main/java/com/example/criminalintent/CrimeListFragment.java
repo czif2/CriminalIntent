@@ -115,6 +115,7 @@ public class CrimeListFragment extends Fragment {
     private void updateSubtitle(){
         CrimeLab crimeLab=CrimeLab.get(getActivity());
         int crimeSize=crimeLab.getCrimes().size();
+//        System.out.println(crimeSize);
 //        String subtitle=getString(R.string.subtitle_format,crimeCount);
         String subtitle= getResources().getQuantityString(R.plurals.subtitle_plural,crimeSize,crimeSize);
         //接受字符串资源中占位符的替换值，updateSubtitle用其来生成子标题的字符串。

@@ -9,9 +9,8 @@
     <string name="show_subtitle">Show Subtitle</string>
     <string name="hide_subtitle">Hide Subtitle</string>
     <plurals name="subtitle_plural">
+        <item quantity="one">%1$d crime</item>
 
-        <item quantity="zero">%d crime</item>
-        <item quantity="one">%d crime</item>
         <item quantity="other">%1$d crimes</item></plurals>
 </resources>
 
