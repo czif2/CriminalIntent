@@ -11,7 +11,12 @@ public class Crime {
     private boolean mSolved;
 
     public Crime(){
-        mid=UUID.randomUUID();//产生随机唯一ID值
+        this(UUID.randomUUID());
+//        mid=UUID.randomUUID();//产生随机唯一ID值
+//        mDate=new Date();
+    }
+    public Crime(UUID id){
+        mid=id;
         mDate=new Date();
     }
 

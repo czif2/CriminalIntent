@@ -38,6 +38,13 @@ public class CrimeFragment extends Fragment {
         mCrime=CrimeLab.get(getActivity()).getCrime(crimeId);
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        CrimeLab.get(getActivity()).updateCrime(mCrime);
+    }
+
     public static CrimeFragment newInstance(UUID crimeId){
         Bundle args=new Bundle();
         args.putSerializable(ARG_CRIME_ID,crimeId);
